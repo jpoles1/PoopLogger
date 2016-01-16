@@ -1,0 +1,5 @@
+#ifndef MainWindow_h_
+#define MainWindow_h_
+static Window *main_window;
+void main_window_push()
+#endif

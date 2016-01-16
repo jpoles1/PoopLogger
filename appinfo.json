@@ -13,6 +13,22 @@
     "dummy": 0
   },
   "resources": {
-    "media": []
+    "media": [
+      {
+        "type": "bitmap",
+        "name": "CONFIRM",
+        "file": "img/send.png"
+      },
+      {
+        "type": "bitmap",
+        "name": "TICK",
+        "file": "img/tick.png"
+      },
+      {
+        "type": "bitmap",
+        "name": "CROSS",
+        "file": "img/cross.png"
+      }
+    ]
   }
 }
