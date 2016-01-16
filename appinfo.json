@@ -7,7 +7,7 @@
   "sdkVersion": "3",
   "targetPlatforms": ["basalt"],
   "watchapp": {
-    "watchface": false
+    "BT_KEY": 5
   },
   "appKeys": {
     "dummy": 0

@@ -47,11 +47,8 @@ static void change_rating(){
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
   if(bristol<6){
     bristol = bristol+1;
+    change_rating();
   }
-  change_rating();
-
-  GSize cont_size = text_layer_get_content_size(desc_layer);
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "%d", cont_size.h);
 }
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
   if(bristol>0){
@@ -122,7 +119,7 @@ static GBitmap *s_icon_bitmap, *s_cross_bitmap, *s_tick_bitmap;
 static ActionBarLayer *s_action_bar_layer;
 static void send_up_click_handler(ClickRecognizerRef recognizer, void *context) {
   APP_LOG(APP_LOG_LEVEL_DEBUG, "TEST");
-  window_stack_pop_all(true);
+  send_stool(bristol+1);
 }
 static void send_down_click_handler(ClickRecognizerRef recognizer, void *context) {
   window_stack_pop(true);
@@ -194,6 +191,7 @@ static void init() {
   app_message_register_inbox_dropped(inbox_dropped_callback);
   app_message_register_outbox_failed(outbox_failed_callback);
   app_message_register_outbox_sent(outbox_sent_callback);
+  app_message_open(128, 64);
 }
 
 static void deinit() {
