@@ -24,13 +24,13 @@ static void send_window_load(Window *window){
 
   s_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_CONFIRM);
 
-  const GEdgeInsets icon_insets = {.top = 7, .right = 20, .bottom = 56, .left = 14};
+  const GEdgeInsets icon_insets = {.top = 7, .right = 40, .bottom = 56, .left = 5};
   s_icon_layer = bitmap_layer_create(grect_inset(bounds, icon_insets));
   bitmap_layer_set_bitmap(s_icon_layer, s_icon_bitmap);
   bitmap_layer_set_compositing_mode(s_icon_layer, GCompOpSet);
   layer_add_child(window_layer, bitmap_layer_get_layer(s_icon_layer));
 
-  const GEdgeInsets label_insets = {.top = 112, .right = ACTION_BAR_WIDTH, .left = ACTION_BAR_WIDTH / 2};
+  const GEdgeInsets label_insets = {.top = 105, .right = ACTION_BAR_WIDTH+20, .left = ACTION_BAR_WIDTH / 2};
   s_label_layer = text_layer_create(grect_inset(bounds, label_insets));
   text_layer_set_text(s_label_layer, "Send your Poop Log?");
   text_layer_set_background_color(s_label_layer, GColorClear);
