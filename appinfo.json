@@ -1,0 +1,18 @@
+{
+  "uuid": "82cfbf67-1639-45d9-bd6e-0525775dddb8",
+  "shortName": "PoopLogger",
+  "longName": "PoopLogger",
+  "companyName": "PooTrack",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["basalt"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
