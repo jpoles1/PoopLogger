@@ -142,6 +142,18 @@ static void send_window_load(Window *window){
   action_bar_layer_set_icon(s_action_bar_layer, BUTTON_ID_DOWN, s_cross_bitmap);
   action_bar_layer_add_to_window(s_action_bar_layer, window);
 }
+static void send_window_unload(Window *window){
+  text_layer_destroy(s_label_layer);
+    action_bar_layer_destroy(s_action_bar_layer);
+    bitmap_layer_destroy(s_icon_layer);
+
+    gbitmap_destroy(s_icon_bitmap);
+    gbitmap_destroy(s_tick_bitmap);
+    gbitmap_destroy(s_cross_bitmap);
+
+    //window_destroy(window);
+    //s_main_window = NULL;
+}
 static void init() {
   // Create main Window
   main_window = window_create();
