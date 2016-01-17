@@ -17,7 +17,7 @@ void outbox_failed_callback(DictionaryIterator *iterator, AppMessageResult reaso
 
 void outbox_sent_callback(DictionaryIterator *iterator, void *context) {
   APP_LOG(APP_LOG_LEVEL_INFO, "Outbox send success!");
-  //window_stack_pop_all(true);
+  window_stack_pop_all(true);
 }
 void send_stool(int bristol){
   DictionaryIterator *iterator;
