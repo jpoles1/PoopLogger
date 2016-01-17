@@ -65,7 +65,8 @@ Pebble.addEventListener("appmessage", function(data){
   bristol = data.payload[5];
   console.log("Bristol val is:", bristol)
   var http = new XMLHttpRequest();
+  var url = "http://192.168.1.109:8000/tracker"
   var url = "http://poopguru.herokuapp.com/tracker";
-  //var url = "http://192.168.1.109:8000/tracker"
-  ajax.get(url, {"bristol": bristol}, function(){console.log("SENT")});
+  var d = new Date();
+  ajax.get(url, {"bristol": bristol, "hour": d.getHours(), "day": d.getDate(), "year": d.getFullYear(), "month": d.getMonth(), "dow": d.getDay()}, function(){console.log("SENT")});
 });
