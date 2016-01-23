@@ -5,6 +5,7 @@
   "companyName": "PooTrack",
   "versionLabel": "1.0",
   "sdkVersion": "3",
+  "capabilities": [ "configurable" ],
   "targetPlatforms": ["basalt"],
   "watchapp": {
     "BT_KEY": 5
